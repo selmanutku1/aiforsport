@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, User, Search, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Insights.css';
+import blogsData from '../data/blogs.json';
 
 const Insights = () => {
   const { t } = useTranslation();
@@ -59,65 +60,23 @@ const Insights = () => {
             </div>
 
             <div className="articles-list">
-              {/* Article 1 */}
-              <article className="article-card glass-panel">
-                <div className="article-image img-1"></div>
-                <div className="article-body">
-                  <div className="article-meta text-muted text-sm mb-2">
-                    <span className="text-neon">{t('home.p1Cat')}</span> • Oct 12, 2023 • 5 min read
+              {blogsData.map((blog, index) => (
+                <article key={blog.slug + index} className="article-card glass-panel">
+                  <div className={`article-image ${blog.imageClass || 'img-1'}`}></div>
+                  <div className="article-body">
+                    <div className="article-meta text-muted text-sm mb-2">
+                      <span className="text-neon">{blog.category}</span> • {blog.date} • {blog.readTime}
+                    </div>
+                    <h3 className="article-title text-xl mb-3">{blog.title}</h3>
+                    <p className="article-excerpt text-muted mb-4">
+                      {blog.excerpt}
+                    </p>
+                    <Link to={`/post?slug=${blog.slug}`} className="read-more-link">
+                      {t('insights.readArt')} <ArrowRight size={16} />
+                    </Link>
                   </div>
-                  <h3 className="article-title text-xl mb-3">{t('home.p1Title')}</h3>
-                  <p className="article-excerpt text-muted mb-4">
-                    {t('home.p1Desc')}
-                  </p>
-                  <Link to="/post" className="read-more-link">{t('insights.readArt')} <ArrowRight size={16} /></Link>
-                </div>
-              </article>
-
-              {/* Article 2 */}
-              <article className="article-card glass-panel">
-                <div className="article-image img-2"></div>
-                <div className="article-body">
-                  <div className="article-meta text-muted text-sm mb-2">
-                    <span className="text-orange">{t('home.p2Cat')}</span> • Oct 08, 2023 • 7 min read
-                  </div>
-                  <h3 className="article-title text-xl mb-3">{t('home.p2Title')}</h3>
-                  <p className="article-excerpt text-muted mb-4">
-                    {t('home.p2Desc')}
-                  </p>
-                  <Link to="/post-chatbots" className="read-more-link text-orange-hover">{t('insights.readArt')} <ArrowRight size={16} /></Link>
-                </div>
-              </article>
-
-              {/* Article 3 */}
-              <article className="article-card glass-panel">
-                <div className="article-image img-3"></div>
-                <div className="article-body">
-                  <div className="article-meta text-muted text-sm mb-2">
-                    <span className="text-neon">{t('home.p3Cat')}</span> • Oct 01, 2023 • 6 min read
-                  </div>
-                  <h3 className="article-title text-xl mb-3">{t('home.p3Title')}</h3>
-                  <p className="article-excerpt text-muted mb-4">
-                    {t('home.p3Desc')}
-                  </p>
-                  <Link to="/post-injury" className="read-more-link">{t('insights.readArt')} <ArrowRight size={16} /></Link>
-                </div>
-              </article>
-
-              {/* Article 4 */}
-              <article className="article-card glass-panel">
-                <div className="article-image img-4"></div>
-                <div className="article-body">
-                  <div className="article-meta text-muted text-sm mb-2">
-                    <span className="text-neon">{t('insights.p4Cat')}</span> • Sep 28, 2023 • 10 min read
-                  </div>
-                  <h3 className="article-title text-xl mb-3">{t('insights.p4Title')}</h3>
-                  <p className="article-excerpt text-muted mb-4">
-                    {t('insights.p4Desc')}
-                  </p>
-                  <Link to="/post" className="read-more-link">{t('insights.readArt')} <ArrowRight size={16} /></Link>
-                </div>
-              </article>
+                </article>
+              ))}
             </div>
             
             <div className="pagination mt-8">

@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, Activity, Users, Shield, Play, CheckCircle } from
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
+import blogsData from '../data/blogs.json';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -210,35 +211,17 @@ const Home = () => {
           </div>
 
           <div className="insights-grid">
-            <Link to="/post" className="insight-card glass-panel">
-              <div className="insight-image img-1"></div>
-              <div className="insight-content">
-                <span className="category-tag">{t('home.p1Cat')}</span>
-                <h3 className="insight-title">{t('home.p1Title')}</h3>
-                <p className="insight-excerpt">{t('home.p1Desc')}</p>
-                <span className="insight-date">Oct 12, 2023 • 5 min read</span>
-              </div>
-            </Link>
-
-            <Link to="/post-chatbots" className="insight-card glass-panel">
-              <div className="insight-image img-2"></div>
-              <div className="insight-content">
-                <span className="category-tag">{t('home.p2Cat')}</span>
-                <h3 className="insight-title">{t('home.p2Title')}</h3>
-                <p className="insight-excerpt">{t('home.p2Desc')}</p>
-                <span className="insight-date">Oct 08, 2023 • 7 min read</span>
-              </div>
-            </Link>
-
-            <Link to="/post-injury" className="insight-card glass-panel">
-              <div className="insight-image img-3"></div>
-              <div className="insight-content">
-                <span className="category-tag">{t('home.p3Cat')}</span>
-                <h3 className="insight-title">{t('home.p3Title')}</h3>
-                <p className="insight-excerpt">{t('home.p3Desc')}</p>
-                <span className="insight-date">Oct 01, 2023 • 6 min read</span>
-              </div>
-            </Link>
+            {blogsData.slice(0, 3).map((blog, index) => (
+              <Link key={blog.slug + index} to={`/post?slug=${blog.slug}`} className="insight-card glass-panel">
+                <div className={`insight-image ${blog.imageClass || 'img-1'}`}></div>
+                <div className="insight-content">
+                  <span className="category-tag">{blog.category}</span>
+                  <h3 className="insight-title">{blog.title}</h3>
+                  <p className="insight-excerpt">{blog.excerpt}</p>
+                  <span className="insight-date">{blog.date} • {blog.readTime}</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

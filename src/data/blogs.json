@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "generative-ai-football-scouting",
+    "category": "Trend Raporu",
+    "title": "Futbol Gözlemciliğinde Üretken Yapay Zekanın Yükselişi",
+    "excerpt": "Üst düzey kulüpler küresel gizli yetenekleri keşfetmek için LLM'leri ve bilgisayarlı görüyü nasıl kullanıyor.",
+    "date": "Oct 12, 2023",
+    "readTime": "5 min",
+    "imageClass": "img-1",
+    "content": "<p>Geleneksel gözlemciliğin temel sorunu bilişsel önyargıdır. En deneyimli gözlemciler bile sonluluk önyargısı, hale etkisi ve basit yorgunluğa eğilimlidir...</p><h3>Futuristik Bir Yaklaşım</h3><p>Yeni üretici yapay zeka modelleriyle birlikte artık oyuncu tespiti otonom hale geliyor.</p>"
+  },
+  {
+    "slug": "fan-engagement-chatbots",
+    "category": "Vaka Çalışması",
+    "title": "Yapay Zeka Sohbet Botlarıyla Taraftar Etkileşiminde Devrim",
+    "excerpt": "NBA takımları insan dokunuşunu kaybetmeden kişiselleştirilmiş taraftar deneyimlerini nasıl büyük ölçekte sunuyor.",
+    "date": "Oct 08, 2023",
+    "readTime": "7 min",
+    "imageClass": "img-2",
+    "content": "<p>Chatbot'lar sadece müşteri hizmetlerinde değil, saha kenarında taraftarla canlı etkileşimde devrim yaratıyor...</p><h3>Yeni Nesil Etkileşim</h3><p>Tüm büyük kulüpler kendi AI asistanlarını uygulamalarına entegre ediyor.</p>"
+  },
+  {
+    "slug": "predictive-injury-models",
+    "category": "Analiz",
+    "title": "Tahmine Dayalı Sakatlık Modelleri: Spor Verilerinin Kutsal Kasesi",
+    "excerpt": "Giyilebilir teknoloji ve makine öğrenimi algoritmaları yumuşak doku yaralanmalarını nasıl önceden tahmin ederek kariyerleri uzatıyor.",
+    "date": "Oct 01, 2023",
+    "readTime": "6 min",
+    "imageClass": "img-3",
+    "content": "<p>Makine öğrenimi modelleri oyuncu sakatlıklarını gerçekleşmeden önce tahmin edebiliyor...</p><h3>Kariyer Kurtaran Modeller</h3><p>Uyku verisi, kas gerilimi ve GPS logları bir araya gelerek potansiyel kas yırtılmalarını üç hafta öncesinden saptayabiliyor.</p>"
+  },
+  {
+    "slug": "tennis-analytics-future",
+    "category": "Röportaj",
+    "title": "Kurucu Soru-Cevap: Tenis Analitiğinin Geleceğini İnşa Etmek",
+    "excerpt": "Acemetric CEO'su ile bilgisayarlı görü platformlarının amatör oyuncular için profesyonel düzeyde vuruş analizine erişimi nasıl demokratikleştirdiğini konuşmak üzere bir araya geldik.",
+    "date": "Sep 28, 2023",
+    "readTime": "10 min",
+    "imageClass": "img-4",
+    "content": "<p>Acemetric CEO'su ile tenis üzerine konuştuk...</p><h3>Demokratik Analitik</h3><p>Eskiden 100 bin dolarlık kamera sistemleri artık bir iPhone kamerasından anlık top hızı ölçümü yapabiliyor.</p>"
+  }
+]

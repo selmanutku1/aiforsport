@@ -8,8 +8,6 @@ import UseCases from './pages/UseCases';
 import Community from './pages/Community';
 import About from './pages/About';
 import BlogPost from './pages/BlogPost'; 
-import BlogPostChatbots from './pages/BlogPostChatbots'; 
-import BlogPostInjury from './pages/BlogPostInjury'; 
 
 function App() {
   return (
@@ -20,8 +18,6 @@ function App() {
           <Route path="/tools" element={<AITools />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/post" element={<BlogPost />} />
-          <Route path="/post-chatbots" element={<BlogPostChatbots />} />
-          <Route path="/post-injury" element={<BlogPostInjury />} />
           <Route path="/usecases" element={<UseCases />} />
           <Route path="/community" element={<Community />} />
           <Route path="/about" element={<About />} />
