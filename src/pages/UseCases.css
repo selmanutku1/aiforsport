@@ -1,0 +1,173 @@
+/* Use Cases Page Styles */
+.usecases-header {
+  padding-top: 120px;
+  padding-bottom: 4rem;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 87, 34, 0.08) 0%, transparent 70%);
+}
+
+.usecase-section {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+}
+
+.usecase-section:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.usecase-image {
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.usecase-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--bg-card), transparent);
+}
+
+.uc-football { background-image: url('https://images.unsplash.com/photo-1518605368461-1e1e38ce7058?q=80&w=1200&auto=format&fit=crop'); }
+.uc-fitness { background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop'); }
+.uc-stadium { background-image: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200&auto=format&fit=crop'); }
+
+.usecase-details {
+  padding: 3rem;
+  flex: 1;
+}
+
+.usecase-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(0, 240, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.icon-orange {
+  background: rgba(255, 87, 34, 0.1);
+  border-color: rgba(255, 87, 34, 0.2);
+}
+
+.text-purple { color: #b388ff; }
+.icon-purple {
+  background: rgba(179, 136, 255, 0.1);
+  border-color: rgba(179, 136, 255, 0.2);
+}
+
+.usecase-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.usecase-desc {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.problem-solution {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.ps-box {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.ps-solution {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), transparent);
+}
+
+.border-orange {
+  border-color: rgba(255, 87, 34, 0.2);
+  background: linear-gradient(135deg, rgba(255, 87, 34, 0.05), transparent);
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.1);
+}
+
+.border-purple {
+  border-color: rgba(179, 136, 255, 0.2);
+  background: linear-gradient(135deg, rgba(179, 136, 255, 0.05), transparent);
+  box-shadow: 0 0 15px rgba(179, 136, 255, 0.1);
+}
+
+.ps-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.ps-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.font-semibold { font-weight: 600; }
+.mb-8 { margin-bottom: 2rem; }
+
+.uc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.uc-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.bg-dark-secondary {
+  background-color: var(--bg-dark-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+@media (min-width: 992px) {
+  .usecase-section {
+    flex-direction: row;
+    height: 100%;
+    align-items: stretch;
+  }
+  
+  .reverse-layout {
+    flex-direction: row-reverse;
+  }
+  
+  .usecase-image {
+    width: 45%;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .usecase-image::after {
+    background: linear-gradient(to right, var(--bg-card), transparent);
+  }
+
+  .reverse-layout .usecase-image::after {
+    background: linear-gradient(to left, var(--bg-card), transparent);
+  }
+  
+  .problem-solution {
+    grid-template-columns: 1fr 1fr;
+  }
+}
